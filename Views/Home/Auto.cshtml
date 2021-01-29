@@ -1,0 +1,54 @@
+﻿@model EjercicioTaller.Models.Vehiculo
+@{
+    ViewData["Title"] = "Auto Page";
+}
+
+<form asp-controller="Home" asp-action="CrearAuto">
+
+    <div class="form-group">
+        <label asp-for="Marca">Ingresar marca</label>
+        <input asp-for="Marca" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Modelo">Ingresar modelo</label>
+        <input asp-for="Modelo" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Patente">Ingresar patente</label>
+        <input asp-for="Patente" type="text" class="form-control" />
+    </div>
+    @*
+        <div class="form-group">
+            <label for="Tipo">Tipo</label>
+            <input name="Tipo" type="text" class="form-control" />
+        </div>
+    *@
+
+    <div class="form-group form-check-inline">
+        <input name="Tipo" type="radio" value="compacto"/>
+        <label for="compacto"> Compacto</label><br>
+    </div>
+    <div class="form-group form-check-inline">
+        <input name="Tipo" type="radio" value="sedan"/>
+        <label for="sedan"> Sedan</label><br>
+    </div>
+    <div class="form-group form-check-inline">
+        <input name="Tipo" type="radio" value="monovolumen"/>
+        <label for="monovolumen"> Monovolumen</label><br>
+    </div>
+    <div class="form-group form-check-inline">
+        <input name="Tipo" type="radio" value="utilitario"/>
+        <label for="utilitario"> Utilitario</label><br>
+    </div>
+    <div class="form-group form-check-inline">
+        <input name="Tipo" type="radio" value="lujo"/>
+        <label for="lujo"> Lujo</label><br>
+    </div>
+
+    <div class="form-group">
+        <label for="CantidadPuertas">Ingresar cantidad de puertas</label>
+        <input name="CantidadPuertas" type="number" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-danger">Cargar auto</button>
+</form>

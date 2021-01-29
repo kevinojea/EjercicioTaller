@@ -1,0 +1,25 @@
+﻿@model EjercicioTaller.Models.Desperfecto
+@{
+    ViewData["Title"] = "Desp Page";
+}
+
+<form asp-controller="Home" asp-action="CrearDesperfecto">
+    <div class="form-group">
+        <label asp-for="VehiculoRefID">Ingresar ID de vehículo (automovil/moto)</label>
+        <input asp-for="VehiculoRefID" type="number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Descripcion">Descripcion del problema</label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="ManoDeObra">Mano de obra (entero)</label>
+        <input asp-for="ManoDeObra" type="number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Tiempo">Tiempo estimado (días)</label>
+        <input asp-for="Tiempo" type="number" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-danger">Ingresar</button>
+</form>

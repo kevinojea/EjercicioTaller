@@ -1,0 +1,26 @@
+﻿@model EjercicioTaller.Models.Vehiculo
+@{
+    ViewData["Title"] = "Moto Page";
+}
+
+<form asp-controller="Home" asp-action="CrearMoto">
+
+    <div class="form-group">
+        <label asp-for="Marca">Ingresar marca</label>
+        <input asp-for="Marca" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Modelo">Ingresar modelo</label>
+        <input asp-for="Modelo" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Patente">Ingresar patente</label>
+        <input asp-for="Patente" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Cilindrada">Ingresar cilindrada</label>
+        <input name="Cilindrada" type="number" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-danger">Cargar moto</button>
+</form>

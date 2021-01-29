@@ -1,0 +1,22 @@
+﻿@model EjercicioTaller.Models.Repuesto
+@{
+    ViewData["Title"] = "Rep Page";
+}
+
+<form asp-controller="Home" asp-action="CrearRepuesto">
+
+    <div class="form-group">
+        <label asp-for="DesperfectoRefID">Ingresar ID del desperfecto</label>
+        <input asp-for="DesperfectoRefID" type="number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Nombre">Ingresar nombre del repuesto</label>
+        <input asp-for="Nombre" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Precio">Ingresar precio del repuesto</label>
+        <input asp-for="Precio" type="number" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-danger">Ingresar</button>
+</form>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-controller="Home" asp-action="CalcPresupuesto">
+    <div class="form-group">
+        <label for="VehiculoID">Ingresar ID de vehículo (automovil/moto)</label>
+        <input name="VehiculoID" type="number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input name="porcTipo" type="radio" value="descuento" />
+        <label for="descuento">Descuento</label>
+    </div>
+    <div class="form-group">
+        <input name="porcTipo" type="radio" value="recargo" />
+        <label for="recargo">Recargo</label>
+    </div>
+    <div class="form-group">
+        <label for="porcCant">Porcentaje a operar</label>
+        <input name="porcCant" type="number" class="form-control" />
+    </div>
+
+        <button type="submit" class="btn btn-danger">Ver presupuesto</button>
+</form>
